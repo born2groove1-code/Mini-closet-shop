@@ -144,7 +144,7 @@ npm run dev                     # http://localhost:3000
 ### 2. Set the admin e-mails, then run the SQL migration
 
 1. Open `supabase/migrations/20261010000000_mini_closet_init.sql`.
-2. In section **1. Admin allowlist**, replace the placeholders `admin1@minicloset.com` and `admin2@minicloset.com` with the owners' **real** e-mail addresses. They must be able to receive the confirmation e-mail.
+2. In section **1. Admin allowlist**, check the allowlisted owner e-mail (`born2groove1@gmail.com`) and add any other owners' **real** e-mail addresses. They must be able to receive the confirmation e-mail.
 3. In Supabase, go to **SQL Editor → New query**, paste the **whole file**, and click **Run**.
 
    The migration creates:

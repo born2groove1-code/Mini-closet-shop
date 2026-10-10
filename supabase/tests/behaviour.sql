@@ -16,6 +16,9 @@ grant execute on function pg_temp.err(text) to anon, authenticated;
 -- ---------------------------------------------------------------------------
 -- Users
 -- ---------------------------------------------------------------------------
+-- Test fixture admins (the migration only seeds the real owner address).
+insert into public.admin_emails (email) values ('admin1@minicloset.com'), ('admin2@minicloset.com');
+
 insert into auth.users (id, email, email_confirmed_at, raw_user_meta_data) values
   ('00000000-0000-0000-0000-00000000000a', 'Admin1@MiniCloset.com', now(), '{"full_name":"Arti Chandra"}'),
   ('00000000-0000-0000-0000-00000000000b', 'admin2@minicloset.com', null, '{}'),
