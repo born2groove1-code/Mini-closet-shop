@@ -35,8 +35,8 @@ $$;
 
 -- -----------------------------------------------------------------------------
 -- 1. Admin allowlist
---    Replace the placeholder addresses with the owners' real e-mail addresses
---    (they must be able to receive the Supabase confirmation e-mail).
+--    Owners' real e-mail addresses (they must be able to receive the Supabase
+--    confirmation e-mail).
 --    Manage later with:
 --      insert into public.admin_emails (email) values ('owner@example.com');
 --      delete from public.admin_emails where email = 'old@example.com';
@@ -47,8 +47,7 @@ create table if not exists public.admin_emails (
 );
 
 insert into public.admin_emails (email) values
-  ('admin1@minicloset.com'),
-  ('admin2@minicloset.com')
+  ('born2groove1@gmail.com')
 on conflict (email) do nothing;
 
 -- The single source of truth for admin status. Checks the *verified* JWT

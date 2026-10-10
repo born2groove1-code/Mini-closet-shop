@@ -44,6 +44,7 @@ PSQL=(psql -h "$TMP" -p "$PG_PORT" -U postgres -d postgres -v ON_ERROR_STOP=1 -q
 "${PSQL[@]}" -f "$ROOT/supabase/tests/supabase-stubs.sql"
 "${PSQL[@]}" -f "$ROOT/supabase/migrations/20261010000000_mini_closet_init.sql"
 "${PSQL[@]}" <<'SQL'
+insert into public.admin_emails (email) values ('admin1@minicloset.com');
 insert into auth.users (id, email, email_confirmed_at, raw_user_meta_data) values
   ('00000000-0000-0000-0000-00000000000a', 'admin1@minicloset.com', now(), '{"full_name":"Arti Chandra"}'),
   ('00000000-0000-0000-0000-0000000000c1', 'priya@example.com', now(), '{"full_name":"Priya Sharma"}'),
