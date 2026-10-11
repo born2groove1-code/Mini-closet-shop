@@ -47,7 +47,8 @@ create table if not exists public.admin_emails (
 );
 
 insert into public.admin_emails (email) values
-  ('born2groove1@gmail.com')
+  ('born2groove1@gmail.com'),
+  ('arti871985@gmail.com')
 on conflict (email) do nothing;
 
 -- The single source of truth for admin status. Checks the *verified* JWT

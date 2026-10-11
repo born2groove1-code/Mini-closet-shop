@@ -42,7 +42,7 @@ and made to deploy free on **Vercel + Supabase**.
 - Checkout form with validation: full name, Indian mobile (+91 prefixes are accepted), address, city, state/UT, and 6-digit PIN.
 - Payment is **Cash on Delivery**. New orders start with status `Pending COD Verification`. An online-payment option is shown as "coming soon".
 - Order history with a status timeline, tracking number, a WhatsApp help link, and self-cancellation while the order is still pending.
-- Floating WhatsApp button. On a product page it pre-fills *"Hi Mini Closet, I am interested in inquiring about [Product] (Size: [Size])"*; on other pages it uses the general order/shopping message. If the number is not set, it shows a "not configured" indicator instead.
+- Floating WhatsApp button. On a product page it pre-fills *"Hi Mini Closet, I am interested in inquiring about [Product] (Size: [Size])"*; on other pages it uses the general order/shopping message. It uses `NEXT_PUBLIC_WHATSAPP_NUMBER`, or the number in `src/lib/store-config.ts` if that is not set.
 - Help & Support page: shipping (3–7 business days), COD, returns and exchange policy, store hours, contact details and FAQ.
 - Polished empty, loading (skeleton), error and 404 states. Touch targets are at least 44 px and the layout follows iOS safe areas.
 - Search-engine metadata, Open Graph image, and an app icon made from the logo.
