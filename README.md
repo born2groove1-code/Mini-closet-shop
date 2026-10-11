@@ -231,15 +231,6 @@ Run the app (locally or on Vercel). Then **Create account** with each allowliste
 
 ---
 
-## AI shopping assistant
-
-A chat bubble (above the WhatsApp button) answers customer questions using Claude. It only knows the store policies in `src/lib/store-config.ts` and the live active catalogue, and links to product pages.
-
-1. Create an API key at [console.anthropic.com](https://console.anthropic.com) → **API Keys** (requires a paid balance).
-2. In Vercel → **Settings → Environment Variables**, add `ANTHROPIC_API_KEY` (no `NEXT_PUBLIC_` prefix), then redeploy.
-
-Without the key the bubble shows "assistant isn't set up yet". Each visitor is limited to about 10 messages a minute. To cut costs, change `MODEL` in `src/app/api/chat/route.ts` to `claude-haiku-5-5`.
-
 ## Using the admin dashboard
 
 - **Add a product from your phone:** open `/admin` → **Add** (bottom bar).

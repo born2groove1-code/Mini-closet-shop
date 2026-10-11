@@ -1,6 +1,5 @@
 import { Suspense } from "react";
 import { CartDrawer } from "@/components/store/cart-drawer";
-import { ChatWidget } from "@/components/store/chat-widget";
 import { NoticeToast } from "@/components/store/notice-toast";
 import { PreviewBanner } from "@/components/store/preview-banner";
 import { SiteFooter } from "@/components/store/site-footer";
@@ -17,7 +16,6 @@ export default function StoreLayout({ children }: LayoutProps<"/">) {
       </main>
       <SiteFooter />
       <CartDrawer />
-      <ChatWidget />
       <WhatsAppFloat />
       <Suspense fallback={null}>
         <NoticeToast />
