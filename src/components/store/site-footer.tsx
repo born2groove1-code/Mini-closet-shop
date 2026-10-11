@@ -57,7 +57,7 @@ export function SiteFooter() {
           <h3 className="eyebrow">Visit & Contact</h3>
           <ul className="mt-4 space-y-3 text-sm text-muted">
             <li className="flex gap-3"><MapPin className="mt-0.5 h-4 w-4 shrink-0 text-rose-600" aria-hidden />{STORE.address}</li>
-            <li className="flex gap-3"><Phone className="mt-0.5 h-4 w-4 shrink-0 text-rose-600" aria-hidden /><a href={`tel:${STORE.phoneTel}`} className="hover:text-rose-700">{STORE.phoneDisplay}</a></li>
+            <li className="flex gap-3"><Phone className="mt-0.5 h-4 w-4 shrink-0 text-rose-600" aria-hidden /><a href={`tel:${STORE.phoneTel}`} className="hover:text-rose-700">{STORE.phoneDisplay}</a><span className="text-muted">(Call &amp; WhatsApp)</span></li>
             <li className="flex gap-3"><Mail className="mt-0.5 h-4 w-4 shrink-0 text-rose-600" aria-hidden /><a href={`mailto:${STORE.email}`} className="hover:text-rose-700">{STORE.email}</a></li>
             {STORE.hours.map((h) => (
               <li key={h.days} className="flex gap-3"><Clock className="mt-0.5 h-4 w-4 shrink-0 text-rose-600" aria-hidden />{h.days}: {h.time}</li>

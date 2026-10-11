@@ -1,3 +1,5 @@
+import { STORE } from "./store-config";
+
 /**
  * Public runtime configuration. NEXT_PUBLIC_* values are inlined at build
  * time, so they must be referenced statically (no dynamic property access).
@@ -12,7 +14,7 @@ export const env = {
     process.env.NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY ??
     "",
   siteUrl: (process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000").replace(/\/+$/, ""),
-  whatsappNumber: (process.env.NEXT_PUBLIC_WHATSAPP_NUMBER ?? "").replace(/\D/g, ""),
+  whatsappNumber: (process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || STORE.whatsapp).replace(/\D/g, ""),
 };
 
 /** False until Supabase credentials are provided; the store then runs in read-only preview mode. */

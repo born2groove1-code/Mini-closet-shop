@@ -62,7 +62,7 @@ export default function HelpPage() {
         <section id="contact" className="card scroll-mt-40 p-6 sm:p-8">
           <h2 className="flex items-center gap-3 text-2xl"><MessageCircle className="h-6 w-6 text-rose-600" aria-hidden />Contact & Store Hours</h2>
           <ul className="mt-4 space-y-3 text-sm">
-            <li className="flex gap-3"><Phone className="h-4 w-4 text-rose-600" aria-hidden /><a href={`tel:${STORE.phoneTel}`} className="hover:text-rose-700">{STORE.phoneDisplay}</a></li>
+            <li className="flex gap-3"><Phone className="h-4 w-4 text-rose-600" aria-hidden /><a href={`tel:${STORE.phoneTel}`} className="hover:text-rose-700">{STORE.phoneDisplay}</a><span className="text-muted">(Call &amp; WhatsApp)</span></li>
             <li className="flex gap-3"><Mail className="h-4 w-4 text-rose-600" aria-hidden /><a href={`mailto:${STORE.email}`} className="hover:text-rose-700">{STORE.email}</a></li>
             {STORE.hours.map((h) => (
               <li key={h.days} className="flex gap-3"><Clock className="h-4 w-4 text-rose-600" aria-hidden /><span><span className="font-medium">{h.days}:</span> {h.time}</span></li>

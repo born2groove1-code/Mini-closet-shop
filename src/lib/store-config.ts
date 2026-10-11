@@ -10,9 +10,11 @@ export const STORE = {
   hindiTagline: "हर मौके के लिए, हर उम्र की महिलाओं के लिए…",
   description:
     "Mini Closet by Arti Chandra — a boutique of handpicked kurtis, suits, sarees and cord sets for every occasion, shipped all across India.",
-  email: "hello@minicloset.com",
-  phoneDisplay: "+91 98765 43210",
-  phoneTel: "+919876543210",
+  email: "arti871985@gmail.com",
+  phoneDisplay: "+91 95590 97277",
+  phoneTel: "+919559097277",
+  /** Same number is on WhatsApp. NEXT_PUBLIC_WHATSAPP_NUMBER overrides it if set. */
+  whatsapp: "919559097277",
   address: "Mini Closet Boutique, India",
   hours: [
     { days: "Monday – Saturday", time: "10:30 AM – 8:30 PM" },
