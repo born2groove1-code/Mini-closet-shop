@@ -25,8 +25,10 @@ export PGOPTIONS="-c client_min_messages=warning"
 PSQL=(psql -h "$TMP" -p "$PORT" -U postgres -d postgres -v ON_ERROR_STOP=1 -q)
 "${PSQL[@]}" -f "$ROOT/supabase/tests/supabase-stubs.sql"
 "${PSQL[@]}" -f "$ROOT/supabase/migrations/20261010000000_mini_closet_init.sql"
+"${PSQL[@]}" -f "$ROOT/supabase/migrations/20261011000000_more_sizes.sql"
 echo "Migration applied. Re-applying to check idempotency…"
 "${PSQL[@]}" -f "$ROOT/supabase/migrations/20261010000000_mini_closet_init.sql"
+"${PSQL[@]}" -f "$ROOT/supabase/migrations/20261011000000_more_sizes.sql"
 "${PSQL[@]}" -o /dev/null -f "$ROOT/supabase/tests/behaviour.sql"
 
 echo "Concurrency: 6 parallel checkouts racing for the last unit of a product…"

@@ -40,7 +40,7 @@ export function isCategorySlug(value: unknown): value is CategorySlug {
   return typeof value === "string" && CATEGORY_SLUGS.includes(value as CategorySlug);
 }
 
-export const SIZES = ["S", "M", "L", "XL", "XXL", "Free Size"] as const;
+export const SIZES = ["XS", "S", "M", "L", "XL", "XXL", "XXXL", "4XL", "5XL", "Free Size"] as const;
 export type Size = (typeof SIZES)[number];
 
 export function isSize(value: unknown): value is Size {

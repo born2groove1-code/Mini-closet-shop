@@ -225,8 +225,10 @@ begin
     like '%products_price_not_above_mrp%', 'offer price cannot exceed MRP';
   assert pg_temp.err(format('update public.products set stock = -1 where id = %L', v_new))
     like '%products_stock_check%', 'stock check constraint';
-  assert pg_temp.err(format($q$update public.products set sizes = '{XXXL}' where id = %L$q$, v_new))
+  assert pg_temp.err(format($q$update public.products set sizes = '{6XL}' where id = %L$q$, v_new))
     like '%products_sizes_check%', 'sizes constrained';
+  assert pg_temp.err(format($q$update public.products set sizes = '{XS,XXXL,4XL,5XL}' where id = %L$q$, v_new)) is null,
+    'extended sizes allowed';
   delete from public.products where id = v_new;
 
   insert into storage.objects (bucket_id, name) values ('product-images', 'products/new.jpg');

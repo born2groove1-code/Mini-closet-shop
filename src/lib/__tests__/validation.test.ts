@@ -61,7 +61,7 @@ describe("checkoutSchema", () => {
       checkoutSchema.safeParse({ ...validCheckout, items: [{ ...validCheckout.items[0], quantity: 11 }] }).success,
     ).toBe(false);
     expect(
-      checkoutSchema.safeParse({ ...validCheckout, items: [{ ...validCheckout.items[0], size: "XXXL" }] }).success,
+      checkoutSchema.safeParse({ ...validCheckout, items: [{ ...validCheckout.items[0], size: "6XL" }] }).success,
     ).toBe(false);
   });
 
