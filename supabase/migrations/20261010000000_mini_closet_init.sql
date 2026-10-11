@@ -211,7 +211,7 @@ create table if not exists public.products (
   stock       integer not null default 0 check (stock >= 0),
   sizes       text[] not null default '{}'
               check (cardinality(sizes) >= 1
-                     and sizes <@ array['S', 'M', 'L', 'XL', 'XXL', 'Free Size']::text[]),
+                     and sizes <@ array['XS', 'S', 'M', 'L', 'XL', 'XXL', 'XXXL', '4XL', '5XL', 'Free Size']::text[]),
   images      text[] not null default '{}' check (cardinality(images) <= 8),
   is_featured boolean not null default false,
   is_active   boolean not null default true,
